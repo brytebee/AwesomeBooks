@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>Awesome Books</h1>
-
-    <form action="">
-        <input type="text" name="title" id="" placeholder="Title">
-        <input type="text" name="autor" id="" placeholder="Author">
-        <button type="submit" name="submit">Add</button>
+    <ul id="booklist"></ul>
+    <form target="_blank" method="post">
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="author" id="author" placeholder="Author">
+        <button type="submit" name="submit" onclick="addNewBook()">Add</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
