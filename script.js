@@ -33,5 +33,8 @@ form.addEventListener('submit', (e) => {
 });
 
 window.addEventListener('load', () => {
+  if(JSON.parse(localStorage.getItem('storeBook')) === null){
+    store.setItem('storeBook', JSON.stringify(books));
+  }
   displayBooks();
 });
