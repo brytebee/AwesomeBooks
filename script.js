@@ -1,7 +1,7 @@
 let books = [];
 const store = window.localStorage;
 const list = document.getElementById('booklist');
-const form = document.getElementById('form')
+const form = document.getElementById('form');
 
 function displayBooks() {
   while (list.firstChild) {
