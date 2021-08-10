@@ -1,7 +1,7 @@
 let books = [];
 const store = window.localStorage;
 const list = document.getElementById('booklist');
-const button = document.getElementById('newBook');
+const form = document.getElementById('form')
 
 function displayBooks() {
   while (list.firstChild) {
@@ -9,8 +9,8 @@ function displayBooks() {
   }
   books = JSON.parse(localStorage.getItem('storeBook'));
   books.forEach((book) => {
-    const li = document.createElement("li");
-    li.innerHTML = book.title + ' ' + book.author;
+    const li = document.createElement('li');
+    li.innerHTML = `author: ${book.author}: title: ${book.title}`;
     const removeButton = document.createElement('button');
     removeButton.innerHTML = 'Remove';
     removeButton.addEventListener('click', () => {
@@ -23,7 +23,8 @@ function displayBooks() {
   });
 }
 
-button.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   books.push({ title, author });
