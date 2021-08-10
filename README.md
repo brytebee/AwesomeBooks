@@ -5,7 +5,7 @@
 
 > In this project, you will build a basic website that allows users to add/remove books from a library list of books. You will achieve that by using JavaScript objects and arrays. You will also need to dynamically modify the DOM and add basic events.
 
-![screenshot](/assets/mobile-screen.png)
+![image](https://user-images.githubusercontent.com/43698511/128846370-dc5622fe-b062-4655-afa8-97b2a53202af.png)
 
 This project features HTML5 semantic tags, CSS and JS-DOM.
 
