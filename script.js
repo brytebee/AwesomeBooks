@@ -1,13 +1,14 @@
 let books = [];
 const store = window.localStorage;
-let list = document.getElementById('booklist');
+const list = document.getElementById('booklist');
+const button = document.getElementById('newBook');
 
 function displayBooks() {
   while (list.firstChild) {
     list.removeChild(list.firstChild);
   }
-  books = JSON.parse(localStorage.getItem("storeBook"));
-  books.map((book) => {
+  books = JSON.parse(localStorage.getItem('storeBook'));
+  books.forEach((book) => {
     const li = document.createElement("li");
     li.innerHTML = book.title + ' ' + book.author;
     const removeButton = document.createElement('button');
@@ -22,13 +23,13 @@ function displayBooks() {
   });
 }
 
-function addNewBook() {
-  let title = document.getElementById('title').value;
-  let author = document.getElementById('author').value;
-  books.push({ title , author });
+button.addEventListener('click', () => {
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  books.push({ title, author });
   store.setItem('storeBook', JSON.stringify(books));
   displayBooks();
-}
+});
 
 window.addEventListener('load', () => {
   displayBooks();
