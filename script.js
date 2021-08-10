@@ -17,21 +17,25 @@ class Library {
       li.innerHTML = `author: ${book.author}: title: ${book.title}`;
       const removeButton = document.createElement('button');
       removeButton.innerHTML = 'Remove';
-      removeButton.addEventListener('click', () => {
-        this.books = this.books.filter((bok) => bok.title !== book.title);
-        this.store.setItem('storeBook', JSON.stringify(this.books));
+      removeButton.addEventListener('click', ()=> {
+        this.removeBook(book.title)
         window.location.reload();
       });
       li.appendChild(removeButton);
       this.list.appendChild(li);
     });
-    console.log('Hello');
   }
   
-  addBook(){
+  addBook(title, author){
     this.books.push({ title, author });
     this.store.setItem('storeBook', JSON.stringify(this.books));
     this.displayBooks();
+  }
+
+  removeBook(title){
+    this.books = this.books.filter((bok) => bok.title !== title);
+    this.store.setItem('storeBook', JSON.stringify(this.books));
+    
   }
 }
 
