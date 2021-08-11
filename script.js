@@ -20,6 +20,7 @@ class Library {
 
     this.books.forEach((book) => {
       const li = document.createElement('li');
+      li.style.display = 'flex';
       li.innerHTML = `author: ${book.author}: title: ${book.title}`;
       const removeButton = document.createElement('button');
       removeButton.innerHTML = 'Remove';
