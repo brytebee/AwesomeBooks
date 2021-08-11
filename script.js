@@ -26,7 +26,7 @@ class Library {
       removeButton.innerHTML = 'Remove';
       removeButton.addEventListener('click', () => {
         this.removeBook(book.title);
-        window.location.reload();
+        this.displayBooks();
       });
       li.appendChild(removeButton);
       this.list.appendChild(li);
@@ -65,3 +65,42 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const author = document.getElementById('author').value;
   library.addBook(title, author);
 });
+
+document.getElementById('list-button').addEventListener('click', () => {
+  let listsection = document.getElementById('list-section');
+  let formsection = document.getElementById('add-new-section');
+  let contactsection = document.getElementById('contact');
+  if(listsection.style.display !== 'flex') {
+    listsection.style.display = 'flex';
+    formsection.style.display = 'none';
+    contactsection.style.display = 'none';
+  }
+  else
+    listsection.style.display = 'none';
+})
+
+document.getElementById('addNew').addEventListener('click', () => {
+  let listsection = document.getElementById('list-section');
+  let formsection = document.getElementById('add-new-section');
+  let contactsection = document.getElementById('contact');
+  if(formsection.style.display !== 'flex') {
+    listsection.style.display = 'none';
+    formsection.style.display = 'flex';
+    contactsection.style.display = 'none';
+  }
+  else
+  formsection.style.display = 'none';
+})
+
+document.getElementById('contact-button').addEventListener('click', () => {
+  let listsection = document.getElementById('list-section');
+  let formsection = document.getElementById('add-new-section');
+  let contactsection = document.getElementById('contact');
+  if(contactsection.style.display !== 'flex') {
+    listsection.style.display = 'none';
+    formsection.style.display = 'none';
+    contactsection.style.display = 'flex';
+  }
+  else
+  contactsection.style.display = 'none';
+})

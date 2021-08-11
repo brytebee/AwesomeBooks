@@ -36,20 +36,23 @@ header {
 
 section {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10%;
 }
 
 #list-button,
 #contact-button {
   border: none;
+  background-color: #e9e9f9;
 }
 
 #addNew {
   border-top: none;
   border-bottom: none;
   padding: 0 15px;
+  background-color: #e9e9f9;
 }
 
 #list-button:hover,
