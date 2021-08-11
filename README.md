@@ -5,7 +5,9 @@
 
 > In this project, you will build a basic website that allows users to add/remove books from a library list of books. You will achieve that by using JavaScript objects and arrays. You will also need to dynamically modify the DOM and add basic events.
 
-![image](https://user-images.githubusercontent.com/43698511/128846370-dc5622fe-b062-4655-afa8-97b2a53202af.png)
+![image](https://user-images.githubusercontent.com/27709832/129063785-ecfed30f-4b35-4a0d-9714-55171548d766.png)
+![image](https://user-images.githubusercontent.com/27709832/129064020-9fdc3f72-2205-4cd6-8c40-2203dbad40a7.png)
+
 
 This project features HTML5 semantic tags, CSS and JS-DOM.
 
@@ -15,7 +17,7 @@ This project features HTML5 semantic tags, CSS and JS-DOM.
 
 ## Live Demo
 
-[Live Demo Link](https://brytebee.github.io/)
+[Live Demo Link](https://brytebee.github.io/AwesomeBooks/)
 
 
 ### Prerequisites
