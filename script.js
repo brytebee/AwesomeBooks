@@ -46,9 +46,9 @@ class Library {
 }
 
 const library = new Library(JSON.parse(localStorage.getItem('storeBook')));
-let listsection = document.getElementById('list-section');
-let formsection = document.getElementById('add-new-section');
-let contactsection = document.getElementById('contact');
+const listsection = document.getElementById('list-section');
+const formsection = document.getElementById('add-new-section');
+const contactsection = document.getElementById('contact');
 
 window.addEventListener('load', () => {
   if (JSON.parse(localStorage.getItem('storeBook')) === null) {
@@ -57,15 +57,17 @@ window.addEventListener('load', () => {
   } else {
     library.displayBooks();
   }
-  let currentDate = document.getElementById('date');
+  const currentDate = document.getElementById('date');
+  /* eslint-disable */
   currentDate.innerHTML = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL);
+  /* eslint-enable */
   listsection.style.display = 'flex';
 });
 
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
-  let title = document.getElementById('title').value;
-  let author = document.getElementById('author').value;
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
   library.addBook(title, author);
   listsection.style.display = 'flex';
   formsection.style.display = 'none';
@@ -73,31 +75,31 @@ document.getElementById('form').addEventListener('submit', (e) => {
 });
 
 document.getElementById('list-button').addEventListener('click', () => {
-  if(listsection.style.display !== 'flex') {
+  if (listsection.style.display !== 'flex') {
     listsection.style.display = 'flex';
     formsection.style.display = 'none';
     contactsection.style.display = 'none';
-  }
-  else
+  } else {
     listsection.style.display = 'none';
-})
+  }
+});
 
 document.getElementById('addNew').addEventListener('click', () => {
-  if(formsection.style.display !== 'flex') {
+  if (formsection.style.display !== 'flex') {
     listsection.style.display = 'none';
     formsection.style.display = 'flex';
     contactsection.style.display = 'none';
+  } else {
+    formsection.style.display = 'none';
   }
-  else
-  formsection.style.display = 'none';
-})
+});
 
 document.getElementById('contact-button').addEventListener('click', () => {
-  if(contactsection.style.display !== 'flex') {
+  if (contactsection.style.display !== 'flex') {
     listsection.style.display = 'none';
     formsection.style.display = 'none';
     contactsection.style.display = 'flex';
+  } else {
+    contactsection.style.display = 'none';
   }
-  else
-  contactsection.style.display = 'none';
-})
+});
