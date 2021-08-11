@@ -29,6 +29,35 @@ header {
   background-color: #e9e9f9;
 }
 
+#date {
+  align-self: flex-end;
+  padding-right: 5px;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#list-button,
+#contact-button {
+  border: none;
+}
+
+#addNew {
+  border-top: none;
+  border-bottom: none;
+  padding: 0 15px;
+}
+
+#list-button:hover,
+#addNew:hover,
+#contact-button:hover {
+  color: #2d75d3;
+}
+
 #list li {
   display: inline;
   padding: 0 10px;
