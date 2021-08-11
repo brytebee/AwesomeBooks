@@ -7,6 +7,37 @@ body {
   display: flex;
 }
 
+#form {
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 10%;
+}
+
+#newBook {
+  width: 60px;
+  align-self: flex-end;
+}
+
+header {
+  width: 100%;
+}
+
+#navbar {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #e9e9f9;
+}
+
+#list li {
+  display: inline;
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #booklist {
   flex-direction: column;
   justify-content: space-around;
@@ -29,12 +60,14 @@ body {
   margin-left: 12px;
 }
 
-#form {
-  flex-direction: column;
-  width: 300px;
+footer {
+  justify-content: flex-start;
+  background-color: #e9e9f9;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
-#newBook {
-  width: 60px;
-  align-self: flex-end;
+footer span {
+  margin: 10px 15px;
 }
