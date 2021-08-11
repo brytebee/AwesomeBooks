@@ -31,8 +31,8 @@ class Library {
     this.displayBooks();
   }
 
-  removeBook(title) {
-    this.books = this.books.filter((bok) => bok.title !== title);
+  removeBook() {
+    this.books = this.books.filter((bok) => this.books.indexOf(bok));
     this.store.setItem('storeBook', JSON.stringify(this.books));
   }
 }
