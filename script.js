@@ -10,9 +10,17 @@ class Library {
     while (this.list.firstChild) {
       this.list.removeChild(this.list.firstChild);
     }
+
     this.books = JSON.parse(localStorage.getItem('storeBook'));
+    if (this.books.length < 1) {
+      this.list.style.display = 'none';
+    } else {
+      this.list.style.display = 'flex';
+    }
+
     this.books.forEach((book) => {
       const li = document.createElement('li');
+      li.style.display = 'flex';
       li.innerHTML = `author: ${book.author}: title: ${book.title}`;
       const removeButton = document.createElement('button');
       removeButton.innerHTML = 'Remove';
