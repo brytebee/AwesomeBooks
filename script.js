@@ -37,6 +37,7 @@ class Library {
     this.books.push({ title, author });
     this.store.setItem('storeBook', JSON.stringify(this.books));
     this.displayBooks();
+    this.form.reset();
   }
 
   removeBook() {
