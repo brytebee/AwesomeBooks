@@ -1,3 +1,4 @@
+var DateTime = luxon.DateTime;
 class Library {
   constructor(books) {
     this.books = books;
@@ -54,6 +55,9 @@ window.addEventListener('load', () => {
   } else {
     library.displayBooks();
   }
+  let currentDate = document.getElementById('date');
+  currentDate.innerHTML = DateTime.now();
+  console.log(DateTime.now());
 });
 
 document.getElementById('form').addEventListener('submit', (e) => {
