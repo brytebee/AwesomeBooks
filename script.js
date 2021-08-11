@@ -46,6 +46,9 @@ class Library {
 }
 
 const library = new Library(JSON.parse(localStorage.getItem('storeBook')));
+let listsection = document.getElementById('list-section');
+let formsection = document.getElementById('add-new-section');
+let contactsection = document.getElementById('contact');
 
 window.addEventListener('load', () => {
   if (JSON.parse(localStorage.getItem('storeBook')) === null) {
@@ -56,20 +59,20 @@ window.addEventListener('load', () => {
   }
   let currentDate = document.getElementById('date');
   currentDate.innerHTML = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL);
-  console.log(luxon.DateTime.now());
+  listsection.style.display = 'flex';
 });
 
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
-  const title = document.getElementById('title').value;
-  const author = document.getElementById('author').value;
+  let title = document.getElementById('title').value;
+  let author = document.getElementById('author').value;
   library.addBook(title, author);
+  listsection.style.display = 'flex';
+  formsection.style.display = 'none';
+  contactsection.style.display = 'none';
 });
 
 document.getElementById('list-button').addEventListener('click', () => {
-  let listsection = document.getElementById('list-section');
-  let formsection = document.getElementById('add-new-section');
-  let contactsection = document.getElementById('contact');
   if(listsection.style.display !== 'flex') {
     listsection.style.display = 'flex';
     formsection.style.display = 'none';
@@ -80,9 +83,6 @@ document.getElementById('list-button').addEventListener('click', () => {
 })
 
 document.getElementById('addNew').addEventListener('click', () => {
-  let listsection = document.getElementById('list-section');
-  let formsection = document.getElementById('add-new-section');
-  let contactsection = document.getElementById('contact');
   if(formsection.style.display !== 'flex') {
     listsection.style.display = 'none';
     formsection.style.display = 'flex';
@@ -93,9 +93,6 @@ document.getElementById('addNew').addEventListener('click', () => {
 })
 
 document.getElementById('contact-button').addEventListener('click', () => {
-  let listsection = document.getElementById('list-section');
-  let formsection = document.getElementById('add-new-section');
-  let contactsection = document.getElementById('contact');
   if(contactsection.style.display !== 'flex') {
     listsection.style.display = 'none';
     formsection.style.display = 'none';
