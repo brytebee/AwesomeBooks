@@ -8,16 +8,45 @@
     <title>Awesome Books</title>
 </head>
 <body class="flex">
-    <h1>All Awesome Books</h1>
-    <ul id="booklist"></ul>
-    <h2>Add a new Book</h2>
-    <form id="form" class="flex">
-        <input type="text" name="title" id="title" placeholder="Title">
-        <br>
-        <input type="text" name="author" id="author" placeholder="Author">
-        <br>
-        <button type="submit" name="submit" id="newBook">Add</button>
-    </form>
+    <header>
+        <nav id="navbar" class="flex">
+            <div id="navbrand">
+                <a href="index.html">Awesome Books</a>
+            </div>
+            <div id="list" class="flex">
+                <ul>
+                    <li><button id="list-button">List</button></li>
+                    <li><button id="addNew">Add New</button></li>
+                    <li><button id="contact-button">Contact</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <p id="date"></p>
+    <section id="list-section">
+        <h1>All Awesome Books</h1>
+        <ul id="booklist"></ul>
+    </section>
+    <section id="add-new-section">
+        <h1>Add a new Book</h1>
+        <form id="form" class="flex">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <br>
+            <input type="text" name="author" id="author" placeholder="Author">
+            <br>
+            <button type="submit" name="submit" id="newBook">Add</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Gastropub trust fund asymmetrical aesthetic meditation semiotics. Offal pinterest man bun try-hard selfies copper mug stumptown. </p>  
+        <p>Butcher blog vaporware ugh lyft tbh af tilde kitsch, chillwave disrupt. Air plant edison bulb chambray semiotics vegan, post-ironic fashion axe bitters farm-to-table etsy.</p>
+        <p>Unicorn put a bird on it vinyl intelligentsia jean shorts copper mug. Health goth cloud bread PBR&B bushwick slow-carb. Fingerstache pabst cornhole banh mi, microdosing vice DIY kitsch.</p>
+    </section>
+    <footer class="flex">
+        <span>Copyright</span>
+    </footer>
     <script src="script.js"></script>
+    <script src="luxon.js"></script>
 </body>
 </html>
