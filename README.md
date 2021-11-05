@@ -3,7 +3,7 @@
 
 ## First JS Project: Awesome Project
 
-> In this project, you will build a basic website that allows users to add/remove books from a library list of books. You will achieve that by using JavaScript objects and arrays. You will also need to dynamically modify the DOM and add basic events.
+In this project, I built a simple website that allows users to add/remove books from a library list of books. I used JavaScript objects and arrays. I also used vanilla JavaScript DOM manipulation to simulate REACT and AJAX's single-page website concept. Lastly, I used is HTML and CSS3 technologies.
 
 ![image](https://user-images.githubusercontent.com/27709832/129063785-ecfed30f-4b35-4a0d-9714-55171548d766.png)
 ![image](https://user-images.githubusercontent.com/27709832/129064020-9fdc3f72-2205-4cd6-8c40-2203dbad40a7.png)
